@@ -12,7 +12,8 @@ function Dragdrop({setResume}) {
   maxSize:5*1024*1024,
   maxFiles:1,
   onDrop:(acceptedfile)=>{
-    console.log(acceptedfile)
+   // console.log(acceptedfile.path);
+     console.log(acceptedfile)
     setResume(acceptedfile[0]);
   }
 

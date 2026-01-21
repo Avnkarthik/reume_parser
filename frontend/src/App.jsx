@@ -4,14 +4,14 @@ import viteLogo from '/vite.svg'
 import './App.css'
 import Dragdrop from './Dragdrop'
 
-function App() {
-  const [resume,setResume]=useState(null);
+import Resume from './Resume'
 
-  return (
-   <div>
-    <Dragdrop setResume={setResume}/>
-    <h1>{resume?resume.name:""}</h1>
-   </div>
+function App() {
+  return(
+    <div>
+      <Resume />
+      
+    </div>
   )
 }
 
