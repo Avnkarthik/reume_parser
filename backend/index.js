@@ -1,9 +1,10 @@
 import multer from "multer";
 import express from "express"
-import pkg from "./ReumeParser.cjs";
-const {Parser}=pkg;
+import {Parser} from "./ReumeParser.js";
+
 import cors from "cors"
 import path from "path";
+import { checkModels } from "./check.js";
 const app=new express();
 app.use(express.json());
 app.use(cors({
@@ -30,6 +31,7 @@ const upload=multer({
 
     
 })
+ //checkModels();
 app.post("/uploadResume",upload.single("Resume"),Parser);
 
 app.listen("8010",()=>console.log("LIstening on port 8010"));
